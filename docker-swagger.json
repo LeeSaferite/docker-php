@@ -176,6 +176,14 @@
           "type": "integer",
           "default": 0
         },
+        "MemoryReservation": {
+          "type": "integer",
+          "default": 0
+        },
+        "KernelMemory": {
+          "type": "integer",
+          "default": 0
+        },
         "CpuShares": {
           "type": "integer"
         },

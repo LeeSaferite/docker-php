@@ -27,6 +27,14 @@ class HostConfig
     /**
      * @var int
      */
+    protected $memoryReservation;
+    /**
+     * @var int
+     */
+    protected $kernelMemory;
+    /**
+     * @var int
+     */
     protected $cpuShares;
     /**
      * @var int
@@ -237,6 +245,46 @@ class HostConfig
     public function setMemorySwap($memorySwap = null)
     {
         $this->memorySwap = $memorySwap;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMemoryReservation()
+    {
+        return $this->memoryReservation;
+    }
+
+    /**
+     * @param int $memoryReservation
+     *
+     * @return self
+     */
+    public function setMemoryReservation($memoryReservation = null)
+    {
+        $this->memoryReservation = $memoryReservation;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getKernelMemory()
+    {
+        return $this->kernelMemory;
+    }
+
+    /**
+     * @param int $kernelMemory
+     *
+     * @return self
+     */
+    public function setKernelMemory($kernelMemory = null)
+    {
+        $this->kernelMemory = $kernelMemory;
 
         return $this;
     }
